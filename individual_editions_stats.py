@@ -23,7 +23,7 @@ def load_year(year):
     st.write("")
     st.write("")
 
-    return pd.read_csv('medals' + year[-4:] + '.csv')
+    return pd.read_csv('data/medals' + year[-4:] + '.csv')
 
 
 def make_ranking(df):

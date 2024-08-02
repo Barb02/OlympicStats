@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
+import plotly.express as px
 
 st.title("Medals Count Evolution through the Years")
 
@@ -16,7 +17,7 @@ years = range(2000, 2021, 4)
 complete_df = pd.DataFrame()
 
 for year in years:
-    df = pd.read_csv("medals" + str(year) + ".csv")
+    df = pd.read_csv("data/medals" + str(year) + ".csv")
     df['Year'] = year
     complete_df = pd.concat([complete_df, df])
 
@@ -34,31 +35,35 @@ countries = st.multiselect(
 df_countries = complete_df[complete_df['Country'].isin(countries)]
 country_codes = df_countries['Country Code'].unique()
 all_combinations = pd.MultiIndex.from_product([years, country_codes], names=['Year', 'Country Code']).to_frame(index=False)
+chart_colors = alt.Scale(domain=country_codes, range=country_colors[1:len(countries)+1])
 
-df_total = df_countries[['Year', 'Country Code', 'Total']]
-# ...
+def make_line_chart(column_name):
 
-df_total = pd.merge(all_combinations, df_total, on=['Year', 'Country Code'], how='left')
-df_total['Total'] = df_total['Total'].fillna(0)
+    df = df_countries[['Year', 'Country Code', column_name]]
+    df = pd.merge(all_combinations, df, on=['Year', 'Country Code'], how='left')
+    df[column_name] = df[column_name].fillna(0)
 
-chart_colors = alt.Scale(domain=df_total['Country Code'].unique(), range=country_colors[1:len(countries)+1])
+    line = alt.Chart(df).mark_line().encode(
+        x=alt.X('Year:O', title='Year', axis=alt.Axis(labelAngle=0)),
+        y=alt.Y(column_name, title= column_name + ' Medals'),
+        color=alt.Color('Country Code:N', scale=chart_colors, legend=alt.Legend(title='Country'))
+    ).properties(
+        width=800,
+        height=400,
+        title= column_name + ' Medals Over Years by Country'
+    )
 
-line = alt.Chart(df_total).mark_line().encode(
-    x=alt.X('Year:O', title='Year', axis=alt.Axis(labelAngle=0)),
-    y=alt.Y('Total', title='Total Medals'),
-    color=alt.Color('Country Code:N', scale=chart_colors, legend=alt.Legend(title='Country'))
-).properties(
-    width=800,
-    height=400,
-    title='Total Medals Over Years by Country'
-)
+    points = alt.Chart(df).mark_point().encode(
+        x=alt.X('Year:O', title='Year', axis=alt.Axis(labelAngle=0)),
+        y=alt.Y(column_name, title= column_name + ' Medals'),
+        color='Country Code'
+    )
 
-points = alt.Chart(df_total).mark_point().encode(
-    x=alt.X('Year:O', title='Year', axis=alt.Axis(labelAngle=0)),
-    y=alt.Y('Total', title='Total Medals'),
-    color='Country Code'
-)
+    chart = line + points
+    st.altair_chart(chart)
 
-chart = line + points
 
-st.altair_chart(chart)
+make_line_chart('Total')
+make_line_chart('Gold')
+make_line_chart('Silver')
+make_line_chart('Bronze')
