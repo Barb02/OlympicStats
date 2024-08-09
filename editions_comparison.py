@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
-import plotly.express as px
 
 st.title("Medals Count Evolution through the Years")
 
@@ -21,9 +20,8 @@ for year in years:
     df['Year'] = year
     complete_df = pd.concat([complete_df, df])
 
-all_countries = complete_df['Country'].unique()
-# sort by year and rank
-default = all_countries[:5]
+all_countries = complete_df.sort_values(by=['Year', 'Rank'], ascending=[False, True])['Country'].unique()
+default = all_countries[:4]
 
 countries = st.multiselect(
     "Pick 2 to 10 countries to compare",
@@ -36,6 +34,26 @@ df_countries = complete_df[complete_df['Country'].isin(countries)]
 country_codes = df_countries['Country Code'].unique()
 all_combinations = pd.MultiIndex.from_product([years, country_codes], names=['Year', 'Country Code']).to_frame(index=False)
 chart_colors = alt.Scale(domain=country_codes, range=country_colors[1:len(countries)+1])
+
+
+df_rank = df_countries[['Year', 'Country Code', 'Rank']]
+
+line = alt.Chart(df_rank).mark_line(interpolate='monotone').encode(
+    x=alt.X('Year:O', title='Year', axis=alt.Axis(labelAngle=0)),
+    y=alt.Y('Rank:Q', scale=alt.Scale(reverse=True), axis=alt.Axis(tickCount=10, title='Rank')),
+    color=alt.Color('Country Code:N', scale=chart_colors, legend=alt.Legend(title='Country'))
+).properties(title='Country Rank Over Years', width=800, height=400)
+
+points = alt.Chart(df_rank).mark_point().encode(
+    x=alt.X('Year:O', title='Year', axis=alt.Axis(labelAngle=0)),
+    y=alt.Y('Rank:Q', scale=alt.Scale(reverse=True)),
+    color=alt.Color('Country Code:N', scale=chart_colors, legend=alt.Legend(title='Country'))
+)
+
+chart = line + points
+
+st.altair_chart(chart)
+
 
 def make_line_chart(column_name):
 
