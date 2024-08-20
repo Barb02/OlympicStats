@@ -35,14 +35,13 @@ country_codes = df_countries['Country Code'].unique()
 all_combinations = pd.MultiIndex.from_product([years, country_codes], names=['Year', 'Country Code']).to_frame(index=False)
 chart_colors = alt.Scale(domain=country_codes, range=country_colors[1:len(countries)+1])
 
-
 df_rank = df_countries[['Year', 'Country Code', 'Rank']]
 
 line = alt.Chart(df_rank).mark_line(interpolate='monotone').encode(
     x=alt.X('Year:O', title='Year', axis=alt.Axis(labelAngle=0)),
-    y=alt.Y('Rank:Q', scale=alt.Scale(reverse=True), axis=alt.Axis(tickCount=10, title='Rank')),
+    y=alt.Y('Rank:Q', scale=alt.Scale(reverse=True, domainMin=1), axis=alt.Axis(tickCount=10, title='Rank')),
     color=alt.Color('Country Code:N', scale=chart_colors, legend=alt.Legend(title='Country'))
-).properties(title='Country Rank Over Years', width=800, height=400)
+).properties(title='Country Rank Over The Years', width=800, height=400)
 
 points = alt.Chart(df_rank).mark_point().encode(
     x=alt.X('Year:O', title='Year', axis=alt.Axis(labelAngle=0)),
@@ -54,6 +53,9 @@ chart = line + points
 
 st.altair_chart(chart)
 
+st.write("**Note:** The graph above uses the gold medal count as the rank criteria, with the number of silver and bronze medals working as tiebrakers, in this order. This is one of the most common ways of ranking countries, but it's not official. An interesting fact is how USA media normally uses total medals as ranking criteria, so their team is ranked first in Beijing 2008. This can be seen in the chart below:")
+st.write("")
+st.write("")
 
 def make_line_chart(column_name):
 

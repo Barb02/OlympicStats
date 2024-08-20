@@ -18,19 +18,20 @@ def load_year(year):
 
     st.header(year)
 
-    st.write("")
-    st.write("")
-    st.write("")
-    st.write("")
-
     return pd.read_csv('data/medals' + year[-4:] + '.csv')
 
 
 def make_ranking(df):
 
+    st.write("")
+    st.write("")
+
     df = df.reset_index(drop=True)
 
-    st.write('**Ranking**')
+    st.write('**Medal Chart**')
+    st.write("")
+    st.write("In this medal chart, the rank criteria used is the gold medal count, with the number of silver and bronze medals working as tiebrakers.")
+    st.write("Feel free to reorder the table by each column by clicking on it. You can also search for countries or download the dataframe (Just hover your mouse over it!).")
     st.dataframe(df, hide_index=True)
 
     st.write("")

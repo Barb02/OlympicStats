@@ -6,3 +6,7 @@
 
 /venv
 __pycache__/
+
+# Static
+
+/images
