@@ -11,7 +11,7 @@ country_colors = [
     "#7FFF00", "#DC143C", "#FF8C00", "#ADFF2F" 
 ]
 
-years = range(2000, 2021, 4)
+years = range(2000, 2025, 4)
 
 complete_df = pd.DataFrame()
 
