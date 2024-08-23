@@ -1,0 +1,87 @@
+Rank,Country Code,Gold,Silver,Bronze,Total,Country
+1,USA,48,26,30,104,United States of America
+2,CHN,39,31,22,92,People's Republic of China
+3,GBR,29,18,18,65,Great Britain
+4,RUS,18,21,26,65,Russian Federation
+5,KOR,13,9,9,31,Republic of Korea
+6,GER,11,20,13,44,Germany
+7,FRA,11,11,13,35,France
+8,AUS,8,15,12,35,Australia
+9,ITA,8,9,11,28,Italy
+10,HUN,8,4,6,18,Hungary
+11,JPN,7,14,17,38,Japan
+12,IRI,7,5,1,13,Islamic Republic of Iran
+13,NED,6,6,8,20,Netherlands
+14,NZL,6,2,5,13,New Zealand
+15,UKR,5,4,10,19,Ukraine
+16,CUB,5,3,7,15,Cuba
+17,ESP,4,10,6,20,Spain
+18,JAM,4,5,4,13,Jamaica
+19,CZE,4,4,3,11,Czechia
+20,RSA,4,1,1,6,South Africa
+21,PRK,4,0,2,6,Democratic People's Republic of Korea
+22,BRA,3,5,9,17,Brazil
+23,POL,3,2,6,11,Poland
+24,ETH,3,2,3,8,Ethiopia
+25,KAZ,3,1,7,11,Kazakhstan
+26,CRO,3,1,2,6,Croatia
+27,CAN,2,6,10,18,Canada
+28,BLR,2,5,3,10,Belarus
+29,KEN,2,4,7,13,Kenya
+30,DEN,2,4,3,9,Denmark
+31,ROU,2,4,1,7,Romania
+32,AZE,2,2,5,9,Azerbaijan
+33,SUI,2,2,0,4,Switzerland
+34,NOR,2,1,1,4,Norway
+35,LTU,2,0,3,5,Lithuania
+36,TUN,2,0,1,3,Tunisia
+37,SWE,1,4,3,8,Sweden
+38,COL,1,3,5,9,Colombia
+39,MEX,1,3,4,8,Mexico
+40,GEO,1,2,3,6,Georgia
+41,IRL,1,1,4,6,Ireland
+42,ARG,1,1,2,4,Argentina
+43,SRB,1,1,2,4,Serbia
+44,SLO,1,1,2,4,Slovenia
+45,TTO,1,1,2,4,Trinidad and Tobago
+46,TUR,1,1,1,3,Turkey
+47,DOM,1,1,0,2,Dominican Republic
+48,TPE,1,0,1,2,Chinese Taipei
+49,LAT,1,0,1,2,Latvia
+50,ALG,1,0,0,1,Algeria
+51,BAH,1,0,0,1,Bahamas
+52,BRN,1,0,0,1,Bahrain
+53,GRN,1,0,0,1,Grenada
+54,UGA,1,0,0,1,Uganda
+55,VEN,1,0,0,1,Venezuela
+56,EGY,0,3,1,4,Egypt
+57,IND,0,2,4,6,India
+58,MGL,0,2,3,5,Mongolia
+59,THA,0,2,2,4,Thailand
+60,BUL,0,2,1,3,Bulgaria
+61,FIN,0,2,1,3,Finland
+62,INA,0,2,1,3,Indonesia
+63,SVK,0,1,3,4,Slovakia
+64,BEL,0,1,2,3,Belgium
+65,ARM,0,1,1,2,Armenia
+66,EST,0,1,1,2,Estonia
+67,MAS,0,1,1,2,Malaysia
+68,PUR,0,1,1,2,Puerto Rico
+69,QAT,0,1,1,2,Qatar
+70,BOT,0,1,0,1,Botswana
+71,CYP,0,1,0,1,Cyprus
+72,GAB,0,1,0,1,Gabon
+73,GUA,0,1,0,1,Guatemala
+74,MNE,0,1,0,1,Montenegro
+75,POR,0,1,0,1,Portugal
+76,UZB,0,0,3,3,Uzbekistan
+77,GRE,0,0,2,2,Greece
+78,SGP,0,0,2,2,Singapore
+79,AFG,0,0,1,1,Afghanistan
+80,CMR,0,0,1,1,Cameroon
+81,HKG,0,0,1,1,"Hong Kong, China"
+82,KUW,0,0,1,1,Kuwait
+83,MAR,0,0,1,1,Morocco
+84,KSA,0,0,1,1,Saudi Arabia
+85,TJK,0,0,1,1,Tajikistan
+86,VIE,0,0,1,1,Vietnam

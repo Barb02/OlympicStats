@@ -1,0 +1,88 @@
+Rank,Country Code,Gold,Silver,Bronze,Total,Country
+1,CHN,48,22,30,100,People's Republic of China
+2,USA,36,39,37,112,United States of America
+3,RUS,24,13,23,60,Russian Federation
+4,GBR,19,13,19,51,Great Britain
+5,GER,16,11,14,41,Germany
+6,AUS,14,15,17,46,Australia
+7,KOR,13,11,8,32,Republic of Korea
+8,JPN,9,8,8,25,Japan
+9,ITA,8,9,10,27,Italy
+10,FRA,7,16,20,43,France
+11,NED,7,5,4,16,Netherlands
+12,UKR,7,4,11,22,Ukraine
+13,KEN,6,4,6,16,Kenya
+14,ESP,5,11,3,19,Spain
+15,JAM,5,4,2,11,Jamaica
+16,POL,4,5,2,11,Poland
+17,ETH,4,2,1,7,Ethiopia
+18,ROU,4,1,4,9,Romania
+19,CUB,3,10,17,30,Cuba
+20,CAN,3,9,8,20,Canada
+21,HUN,3,5,2,10,Hungary
+22,NOR,3,5,1,9,Norway
+23,BRA,3,4,10,17,Brazil
+24,BLR,3,4,7,14,Belarus
+25,CZE,3,3,1,7,Czechia
+26,SVK,3,3,0,6,Slovakia
+27,NZL,3,2,4,9,New Zealand
+28,GEO,3,2,2,7,Georgia
+29,KAZ,2,3,4,9,Kazakhstan
+30,DEN,2,2,3,7,Denmark
+31,PRK,2,2,2,6,Democratic People's Republic of Korea
+32,THA,2,2,2,6,Thailand
+33,MGL,2,2,0,4,Mongolia
+34,SUI,2,1,4,7,Switzerland
+35,ARG,2,0,4,6,Argentina
+36,MEX,2,0,2,4,Mexico
+37,BEL,2,0,0,2,Belgium
+38,ZIM,1,3,0,4,Zimbabwe
+39,SLO,1,2,2,5,Slovenia
+40,AZE,1,1,4,6,Azerbaijan
+41,INA,1,1,4,6,Indonesia
+42,BUL,1,1,3,5,Bulgaria
+43,TUR,1,1,3,5,Turkey
+44,TPE,1,1,2,4,Chinese Taipei
+45,FIN,1,1,2,4,Finland
+46,LAT,1,1,1,3,Latvia
+47,DOM,1,1,0,2,Dominican Republic
+48,EST,1,1,0,2,Estonia
+49,POR,1,1,0,2,Portugal
+50,TTO,1,1,0,2,Trinidad and Tobago
+51,IND,1,0,2,3,India
+52,IRI,1,0,1,2,Islamic Republic of Iran
+53,CMR,1,0,0,1,Cameroon
+54,PAN,1,0,0,1,Panama
+55,TUN,1,0,0,1,Tunisia
+56,SWE,0,4,1,5,Sweden
+57,LTU,0,3,2,5,Lithuania
+58,NGR,0,3,2,5,Nigeria
+59,CRO,0,2,3,5,Croatia
+60,COL,0,2,1,3,Colombia
+61,GRE,0,2,1,3,Greece
+62,ARM,0,1,4,5,Armenia
+63,UZB,0,1,3,4,Uzbekistan
+64,AUT,0,1,2,3,Austria
+65,IRL,0,1,2,3,Ireland
+66,KGZ,0,1,2,3,Kyrgyzstan
+67,SRB,0,1,2,3,Serbia
+68,ALG,0,1,1,2,Algeria
+69,BAH,0,1,1,2,Bahamas
+70,MAR,0,1,1,2,Morocco
+71,TJK,0,1,1,2,Tajikistan
+72,CHI,0,1,0,1,Chile
+73,ECU,0,1,0,1,Ecuador
+74,ISL,0,1,0,1,Iceland
+75,MAS,0,1,0,1,Malaysia
+76,SAM,0,1,0,1,Samoa
+77,SGP,0,1,0,1,Singapore
+78,RSA,0,1,0,1,South Africa
+79,SUD,0,1,0,1,Sudan
+80,VIE,0,1,0,1,Vietnam
+81,EGY,0,0,2,2,Egypt
+82,AFG,0,0,1,1,Afghanistan
+83,ISR,0,0,1,1,Israel
+84,MRI,0,0,1,1,Mauritius
+85,MDA,0,0,1,1,Republic of Moldova
+86,TOG,0,0,1,1,Togo
+87,VEN,0,0,1,1,Venezuela

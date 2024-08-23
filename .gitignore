@@ -1,12 +1,4 @@
-# Data files
-
-*.csv
-
 # Python
 
 /venv
 __pycache__/
-
-# Static
-
-/images
