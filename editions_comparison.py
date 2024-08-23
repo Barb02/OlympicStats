@@ -87,3 +87,52 @@ make_line_chart('Total')
 make_line_chart('Gold')
 make_line_chart('Silver')
 make_line_chart('Bronze')
+
+
+st.write("")
+st.write("")
+st.write("Looking at the medal total chart, an interisting anaylisis would be checking if there is a relation between the rise on number of medals and the country hosting the games.")
+st.write("These are the total medal counts for the edition that each of these countries hosted and it corresponding previous edition:")
+
+st.write("")
+st.write("**Total medal count before and on hosting year**")
+st.write("")
+
+st.write("🇬🇷 Greece")
+col1 , col2 = st.columns(2)
+col1.metric("Sydney 2000", "13 medals")
+col2.metric("Athens 2004", "16 medals", f"{(16/13 - 1) * 100:.2f}" + "%")
+
+st.write("🇨🇳 China")
+col1, col2 = st.columns(2)
+col1.metric("Athens 2004", "63 medals")
+col2.metric("Beijing 2008", "100 medals", f"{(100/63 - 1) * 100:.2f}" + "%")
+
+st.write("🇬🇧 Great Britain")
+col1, col2 = st.columns(2)
+col1.metric("Beijing 2008", "51 medals")
+col2.metric("London 2012", "65 medals", f"{(65/51 - 1) * 100:.2f}" + "%")
+
+st.write("🇧🇷 Brazil")
+col1, col2 = st.columns(2)
+col1.metric("London 2012", "17 medals")
+col2.metric("Rio 2016", "19 medals", f"{(19/17 - 1) * 100:.2f}" + "%")
+
+st.write("🇯🇵 Japan")
+col1, col2 = st.columns(2)
+col1.metric("Rio 2016", "41 medals")
+col2.metric("Tokyo 2020 (2021)", "58 medals", f"{(58/41 - 1)*100:.2f}" + "%")
+
+st.write("🇫🇷 France")
+col1, col2 = st.columns(2)
+col1.metric("Tokyo 2020 (2021)", "33 medals")
+col2.metric("France 2024", "64 medals", f"{(64/33 - 1)*100:.2f}" + "%")
+
+st.write("")
+st.write("As it can be seen, in every edition the host country improved the medals total count, which is expected due to the hometown support, athletes own will to win at home, higher investment on sports by the hosting country and the potential favoritism given by the referees (unfortunately may happen!).")  
+st.write("However, not all countries improved on the same rate. The higher increases were achieved by Japan, China and France, the last country with an impressive number of ~94\% rise, while the lowest rates were obtained by Greece and Brazil (3 and 2 medal increase, respectively).") 
+st.write("There are some factors that could explain these differences:")
+st.write("* Number of athletes representing the country")
+st.write("* Amount of monetary investment in sports")
+st.write("* Level of importance given to the Olympic Games performance (e.g., political reasons, such as USA x USSR rivalry during the Cold War)")
+st.write("* Amount of hometown attendance, and therefore, crowd support")
