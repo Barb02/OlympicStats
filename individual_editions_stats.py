@@ -30,8 +30,8 @@ def make_ranking(df):
 
     st.write('**Medal Chart**')
     st.write("")
-    st.write("In this medal chart, the rank criteria used is the gold medal count, with the number of silver and bronze medals working as tiebrakers.")
-    st.write("Feel free to reorder the table by each column by clicking on it. You can also search for countries or download the dataframe (Just hover your mouse over it!).")
+    st.write("In this medal chart, the ranking criterion used is the gold medal count, with the number of silver and bronze medals serving as tiebreakers.")
+    st.write("Feel free to reorder the table by clicking on the desired column header. You can also search for countries or download the DataFrame (Hover your mouse over the table to see the options!).")
     st.dataframe(df, hide_index=True)
 
     st.write("")

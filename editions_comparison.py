@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 
-st.title("Medals Count Evolution through the Years")
+st.title("Medal Count Evolution Through the Years")
 
 country_colors = [
     "#3a87f2",
@@ -41,7 +41,7 @@ line = alt.Chart(df_rank).mark_line(interpolate='monotone').encode(
     x=alt.X('Year:O', title='Year', axis=alt.Axis(labelAngle=0)),
     y=alt.Y('Rank:Q', scale=alt.Scale(reverse=True, domainMin=1), axis=alt.Axis(tickCount=10, title='Rank')),
     color=alt.Color('Country Code:N', scale=chart_colors, legend=alt.Legend(title='Country'))
-).properties(title='Country Rank Over The Years', width=800, height=400)
+).properties(title='Country Rankings Over the Years', width=800, height=400)
 
 points = alt.Chart(df_rank).mark_point().encode(
     x=alt.X('Year:O', title='Year', axis=alt.Axis(labelAngle=0)),
@@ -53,7 +53,7 @@ chart = line + points
 
 st.altair_chart(chart)
 
-st.write("**Note:** The graph above uses the gold medal count as the rank criteria, with the number of silver and bronze medals working as tiebrakers, in this order. This is one of the most common ways of ranking countries, but it's not official. An interesting fact is how USA media normally uses total medals as ranking criteria, so their team is ranked first in Beijing 2008. This can be seen in the chart below:")
+st.write("**Note:** The graph above uses the gold medal count as the rank criterion, with the number of silver and bronze medals serving as tiebrakers, in this order. This is one of the most common ways of ranking countries, though it's not official. An interesting fact is how USA media normally uses total medal count as the ranking criterion, which results in their team being ranked first in the 2008 Beijing Olympics. This can be seen in the chart below:")
 st.write("")
 st.write("")
 
@@ -70,7 +70,7 @@ def make_line_chart(column_name):
     ).properties(
         width=800,
         height=400,
-        title= column_name + ' Medals Over Years by Country'
+        title= column_name + ' Medals by Country Over the Years'
     )
 
     points = alt.Chart(df).mark_point().encode(
@@ -91,11 +91,11 @@ make_line_chart('Bronze')
 
 st.write("")
 st.write("")
-st.write("Looking at the medal total chart, an interisting anaylisis would be checking if there is a relation between the rise on number of medals and the country hosting the games.")
-st.write("These are the total medal counts for the edition that each of these countries hosted and it corresponding previous edition:")
+st.write("Looking at the total medal chart, an interesting analysis would be to check if there is a relationship between the rise in the number of medals and the country hosting the Games.")
+st.write("These are the total medal counts for the edition each of these countries hosted and the corresponding previous edition:")
 
 st.write("")
-st.write("**Total medal count before and on hosting year**")
+st.write("**Total Medal Count Before and on Hosting Year**")
 st.write("")
 
 st.write("🇬🇷 Greece")
@@ -129,8 +129,8 @@ col1.metric("Tokyo 2020 (2021)", "33 medals")
 col2.metric("France 2024", "64 medals", f"{(64/33 - 1)*100:.2f}" + "%")
 
 st.write("")
-st.write("As it can be seen, in every edition the host country improved the medals total count, which is expected due to the hometown support, athletes own will to win at home, higher investment on sports by the hosting country and the potential favoritism given by the referees (unfortunately may happen!).")  
-st.write("However, not all countries improved on the same rate. The higher increases were achieved by Japan, China and France, the last country with an impressive number of ~94\% rise, while the lowest rates were obtained by Greece and Brazil (3 and 2 medal increase, respectively).") 
+st.write("As it can be seen, in every edition the host country improved its total mdeal count, which is expected due to hometown support, athletes own will to win at home, increased investment on sports by the hosting country and potential favoritism given by the referees (unfortunately may happen!).")  
+st.write("However, not all countries improved at the same rate. The largest increases were achieved by Japan, China and France, the last with an impressive number of ~94\% rise. Meanwhile, the smallest increases were seen in Greece and Brazil, with only 3 and 2 additional medals, respectively.") 
 st.write("There are some factors that could explain these differences:")
 st.write("* Number of athletes representing the country")
 st.write("* Amount of monetary investment in sports")
