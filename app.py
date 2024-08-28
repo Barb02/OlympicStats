@@ -10,7 +10,7 @@ beijing2008page = st.Page("editions/beijing2008.py", title="🇨🇳 Beijing 200
 athens2004page = st.Page("editions/athens2004.py", title="🇬🇷 Athens 2004")
 sydney2000page = st.Page("editions/sydney2000.py", title="🇦🇺 Sydney 2000")
 
-st.logo('images/logolarge.png')
+st.logo('images/logolarge.png', icon_image='images/logo_icon.png')
 
 pg = st.navigation(
     {
